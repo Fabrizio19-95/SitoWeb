@@ -3,14 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio primo sito su Vercel</title>
+    <title>Il Mio Profilo</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #0070f3; } /* Colore blu Vercel */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background-color: #0070f3; /* Blu Vercel */
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        h1 { margin: 0 0 0.5rem; font-size: 1.5rem; }
+        p { color: #666; line-height: 1.6; }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #0070f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #0051a2; }
     </style>
 </head>
 <body>
-    <h1>Ciao Mondo!</h1>
-    <p>Questo sito è ospitato su Vercel tramite GitHub.</p>
+
+    <div class="card">
+        <div class="avatar">F</div>
+        <h1>Fabrizio Di Santo</h1>
+        <p>Benvenuti nel mio spazio web.</p>
+        <p>Sto imparando a usare GitHub e Vercel per pubblicare progetti online in modo rapido e gratuito.</p>
+        <a href="mailto:tua@email.com" class="btn">Contattami</a>
+    </div>
+
 </body>
 </html>
