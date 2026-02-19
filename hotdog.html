@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renatino's Hot no Dog 🌭</title>
+    <title>Renatino's Hot Dog 🌭</title>
     <style>
         /* Sfondo a tema Ketchup e Senape */
         body {
@@ -21,6 +21,7 @@
         .container {
             max-width: 600px;
             width: 100%;
+            margin-top: 40px; /* Spazio extra in alto per la foto */
         }
 
         /* La lavagna del menù */
@@ -32,6 +33,20 @@
             text-align: center;
             border: 4px dashed #e53935; /* Bordo tratteggiato da finto menù di strada */
             animation: popIn 0.6s ease-out forwards;
+            position: relative; /* Necessario per posizionare la foto */
+        }
+
+        /* Stile per la foto tonda in cima */
+        .menu-avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover; /* Taglia la foto perfettamente tonda senza deformarla */
+            border: 5px solid #ffca28; /* Bordo spesso giallo senape */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: -80px auto 20px auto; /* La tira fuori dal box verso l'alto e la centra */
+            background-color: white;
+            display: block; /* Assicura che il margin auto funzioni per centrarla */
         }
 
         @keyframes popIn {
@@ -42,7 +57,7 @@
         h1 {
             color: #d32f2f;
             font-size: 2.8rem;
-            margin-top: 0;
+            margin-top: 10px;
             margin-bottom: 5px;
             text-shadow: 2px 2px 0px #ffca28;
         }
@@ -92,4 +107,51 @@
             color: white;
             padding: 12px 30px;
             text-decoration: none;
-            border-
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="menu-card">
+            <img src="culo.jpg" alt="Chef Renatino" class="menu-avatar">
+            
+            <h1>🌭 Renatino's Hot Dog</h1>
+            <p class="sottotitolo">Il chiosco più esclusivo della casa. Aperto solo quando ho fame io.</p>
+
+            <div class="menu-item">
+                <p class="item-name">Il Classico Rubato <span class="item-price">3 Grattini</span></p>
+                <p class="item-desc">Wurstel sottratto furtivamente dal piatto del Papy mentre guardava altrove. Servito con un pizzico di senso di colpa (vostro, non mio).</p>
+            </div>
+
+            <div class="menu-item">
+                <p class="item-name">Hot Dog Croccante <span class="item-price">5 Carezze</span></p>
+                <p class="item-desc">Un panino farcito esclusivamente con i miei croccantini premium. Niente salse: rovinano la lucentezza del pelo.</p>
+            </div>
+
+            <div class="menu-item">
+                <p class="item-name">Il "Blep" Dog <span class="item-price">Gratis</span></p>
+                <p class="item-desc">Panino vuoto perché ho già leccato via tutto il ripieno di nascosto. Ma vi farò una linguaccia per compensare.</p>
+            </div>
+
+            <div class="menu-item">
+                <p class="item-name">Acqua della Ciotola (Annata 2026) <span class="item-price">1 Grattino</span></p>
+                <p class="item-desc">Servita rigorosamente a temperatura ambiente, possibilmente dopo averci pucciato la zampa dentro per controllare se è bagnata.</p>
+            </div>
+
+            <a href="index.html" class="btn">⬅ Torna alla Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
