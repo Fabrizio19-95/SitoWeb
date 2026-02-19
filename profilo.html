@@ -26,10 +26,16 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 20px;
             text-align: center;
+            transition: all 0.3s ease; /* Prepara l'animazione */
+        }
+        /* Effetto quando passi il mouse sulla card */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
         .card img {
             width: 100%;
-            border-radius: 10px; /* Rende gli angoli della foto morbidi */
+            border-radius: 10px;
             margin-bottom: 15px;
             object-fit: cover;
         }
@@ -41,6 +47,34 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+        }
+        /* Stili per la lista curiosità */
+        ul {
+            text-align: left;
+            line-height: 1.8;
+        }
+        /* Stili per le barre delle abilità */
+        .skill-bar {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 10px 0 20px 0;
+            height: 25px;
+            width: 100%;
+            text-align: left;
+        }
+        .skill-level {
+            background-color: #3b82f6;
+            height: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 14px;
+            padding-left: 10px;
+            line-height: 25px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -50,26 +84,26 @@
         
         <div class="card">
             <h1>Sua Maestà Renatino 👑</h1>
-            <p>Benvenuti nel mio regno privato. Qui potete ammirare la mia magnificenza in diverse pose.</p>
+            <p>Benvenuti nel mio regno privato. Qui potete ammirare la mia magnificenza e scoprire tutti i miei segreti.</p>
         </div>
 
         <div class="card">
-            <img src="Renatino riposa" alt="Renatino che riposa">
-            <h2>Il riposo del guerriero</h2>
-            <p>Dormire 18 ore al giorno è un lavoro faticoso, ma qualcuno deve pur farlo per mantenere questo pelo lucido.</p>
+            <h2>🐈 Curiosità su di me</h2>
+            <ul>
+                <li><strong>Cibo preferito:</strong> Tonno in scatola (sento il rumore dell'apriscatole a chilometri di distanza).</li>
+                <li><strong>Nascondiglio segreto:</strong> Dentro le scatole di cartone dei pacchi, appena arrivano.</li>
+                <li><strong>Nemico giurato:</strong> L'aspirapolvere. Lo odio.</li>
+                <li><strong>Passatempo:</strong> Fissare il vuoto nel muro per spaventare i miei umani.</li>
+            </ul>
         </div>
 
         <div class="card">
-            <img src="WhatsApp Image 2026-02-12 at 15.18.00 (2).jpeg" alt="Renatino e la pappa">
-            <h2>L'ora della pappa</h2>
-            <p>Il miei umani sanno benissimo che se la ciotola è mezza vuota, ci troviamo di fronte a un'emergenza internazionale.</p>
-        </div>
-
-        <div style="text-align: center; margin-bottom: 40px;">
-            <a href="index.html" class="btn">Torna alla Home</a>
-        </div>
-
-    </div>
-
-</body>
-</html>
+            <h2>🏆 Le mie abilità speciali</h2>
+            
+            <p style="text-align: left; margin: 0;"><strong>Dormire sul divano:</strong></p>
+            <div class="skill-bar"><div class="skill-level" style="width: 100%;">100%</div></div>
+            
+            <p style="text-align: left; margin: 0;"><strong>Svegliare gli umani alle 4 del mattino:</strong></p>
+            <div class="skill-bar"><div class="skill-level" style="width: 95%;">95%</div></div>
+            
+            <p style="text-
