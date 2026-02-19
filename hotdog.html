@@ -3,154 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renatino's Hot no Dog 🌭</title>
+    <title>Il Mio Profilo</title>
     <style>
-        /* Sfondo a tema Ketchup e Senape */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ffca28 0%, #e53935 100%);
-            background-attachment: fixed;
+            background-color: #f0f2f5;
             color: #333;
-            margin: 0;
-            padding: 40px 20px;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-        }
-
-        .container {
-            max-width: 600px;
-            width: 100%;
-            margin-top: 40px; /* Spazio extra in alto per la foto */
-        }
-
-        /* La lavagna del menù */
-        .menu-card {
-            background: #fffdf5; /* Bianco panna */
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            text-align: center;
-            border: 4px dashed #e53935; /* Bordo tratteggiato da finto menù di strada */
-            animation: popIn 0.6s ease-out forwards;
-            position: relative; /* Necessario per posizionare la foto */
-        }
-
-        /* Stile per la foto tonda in cima */
-        .menu-avatar {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover; /* Taglia la foto perfettamente tonda senza deformarla */
-            border: 5px solid #ffca28; /* Bordo spesso giallo senape */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            margin: -80px auto 20px auto; /* La tira fuori dal box verso l'alto e la centra */
-            background-color: white;
-            display: block; /* Assicura che il margin auto funzioni per centrarla */
-        }
-
-        @keyframes popIn {
-            0% { transform: scale(0.9); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        h1 {
-            color: #d32f2f;
-            font-size: 2.8rem;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 0px #ffca28;
-        }
-
-        .sottotitolo {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
-        /* Voci del menù */
-        .menu-item {
-            text-align: left;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px dotted #ffca28;
-        }
-        
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-
-        .item-name {
-            font-size: 1.4rem;
-            color: #d32f2f;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .item-price {
-            color: #f57f17;
-            font-weight: 900;
-        }
-
-        .item-desc {
+            height: 100vh;
             margin: 0;
-            color: #555;
-            line-height: 1.5;
         }
-
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background-color: #0070f3;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        h1 { margin: 0 0 0.5rem; font-size: 1.5rem; }
+        p { color: #666; line-height: 1.6; }
+        
         .btn {
             display: inline-block;
-            background-color: #333;
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #0070f3;
             color: white;
-            padding: 12px 30px;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            transition: transform 0.3s, background 0.3s;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
+        .btn:hover { background-color: #0051a2; }
 
-        .btn:hover {
-            background-color: #000;
-            transform: scale(1.05);
+        .btn-small {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 12px;
+            background-color: #f5a623;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            transition: background 0.3s;
         }
+        .btn-small:hover { background-color: #d48a1b; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="menu-card">
-            <img src="culo.jpeg" alt="Chef Renatino" class="menu-avatar">
-            
-            <h1>🌭 Renatino's Hot Dog</h1>
-            <p class="sottotitolo">Il chiosco più esclusivo della casa. Aperto solo quando ho fame io.</p>
-
-            <div class="menu-item">
-                <p class="item-name">Il Classico Rubato <span class="item-price">3 Grattini</span></p>
-                <p class="item-desc">Wurstel sottratto furtivamente dal piatto del Papy mentre guardava altrove. Servito con un pizzico di senso di colpa (vostro, non mio).</p>
-            </div>
-
-            <div class="menu-item">
-                <p class="item-name">Hot Dog Croccante <span class="item-price">5 Carezze</span></p>
-                <p class="item-desc">Un panino farcito esclusivamente con i miei croccantini premium. Niente salse: rovinano la lucentezza del pelo.</p>
-            </div>
-
-            <div class="menu-item">
-                <p class="item-name">Il "Blep" Dog <span class="item-price">Gratis</span></p>
-                <p class="item-desc">Panino vuoto perché ho già leccato via tutto il ripieno di nascosto. Ma vi farò una linguaccia per compensare.</p>
-            </div>
-
-            <div class="menu-item">
-                <p class="item-name">Acqua della Ciotola (Annata 2026) <span class="item-price">1 Grattino</span></p>
-                <p class="item-desc">Servita rigorosamente a temperatura ambiente, possibilmente dopo averci pucciato la zampa dentro per controllare se è bagnata.</p>
-            </div>
-
-            <a href="index.html" class="btn">⬅ Torna alla Home</a>
-        </div>
+    <div class="card">
+        <img src="WhatsApp Image 2026-02-19 at 11.44.20 (6).jpeg" class="avatar" style="object-fit: cover;" alt="Foto di profilo">
+        <h1>Fabrizio Di Santo</h1>
+        <p>Benvenuti nel mio sito web.</p>
+        <p>Sono il gattino più bello di tutti e dovevo assolutamente farvelo sapere.</p>
+        <p>Ammettiamolo: siete qui solo per capire se la macchietta sul muso è caffè o altro.</p>
+        
+        <a href="profilo.html" class="btn">Scopriamo di più su di me</a>
+        <br>
+        <a href="culo.jpg" target="_blank" class="btn-small">Renatino's hot dog 🌭</a>
     </div>
 
 </body>
