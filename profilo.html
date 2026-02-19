@@ -9,7 +9,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-            background-attachment: fixed; /* Mantiene lo sfondo fermo mentre scorri */
+            background-attachment: fixed;
             color: #333;
             margin: 0;
             padding: 30px 20px;
@@ -38,37 +38,41 @@
             width: 100%;
         }
 
+        /* ANIMAZIONE CSS SICURA E INFALLIBILE */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Stile delle Card */
         .card {
-            background: rgba(255, 255, 255, 0.95); /* Leggermente trasparente per far intravedere lo sfondo */
+            background: rgba(255, 255, 255, 0.95);
             padding: 2rem;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             
-            /* Preparazione per l'animazione di comparsa */
-            opacity: 0;
-            transform: translateY(40px);
+            /* L'animazione parte in automatico appena si carica la pagina */
+            animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        /* Classe aggiunta dal JavaScript quando la card appare sullo schermo */
-        .card.visible {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        /* Effetto hover quando passi il mouse (solo dopo che è apparsa) */
-        .card.visible:hover {
+        /* Effetto hover quando passi il mouse */
+        .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
         .card img {
             width: 100%;
-            height: 300px; /* Fissa un'altezza uguale per tutte le foto nella griglia */
-            object-fit: cover; /* Taglia l'immagine senza deformarla per farla entrare nel riquadro */
+            height: 300px; /* Altezza fissa per un effetto griglia perfetto */
+            object-fit: cover;
             border-radius: 12px;
             margin-bottom: 15px;
         }
@@ -100,4 +104,130 @@
         .skill-bar {
             background-color: #e0e0e0;
             border-radius: 10px;
-            margin: 10px 0
+            margin: 10px 0 20px 0;
+            height: 25px;
+            width: 100%;
+            text-align: left;
+            overflow: hidden;
+        }
+        .skill-level {
+            background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            height: 100%;
+            border-radius: 10px;
+            color: #333;
+            font-size: 14px;
+            padding-left: 10px;
+            line-height: 25px;
+            font-weight: bold;
+        }
+        
+        .skill-level.supreme {
+            background: linear-gradient(90deg, #ff6b6b 0%, #ee5253 100%);
+            color: white;
+        }
+
+        h1 { font-size: 2.5rem; color: #ff6b6b; margin-top: 0; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="intro-section">
+            <div class="card">
+                <h1>Sua Maestà Renatino 👑</h1>
+                <p>Benvenuti nel mio regno privato. Qui potete ammirare la mia magnificenza e scoprire tutti i miei segreti.</p>
+            </div>
+
+            <div class="card">
+                <h2>🐈 Curiosità su di me</h2>
+                <ul>
+                    <li><strong>Cibo preferito:</strong> La dieta proteica che fanno la Mamy e il Papy.</li>
+                    <li><strong>Nascondiglio segreto:</strong> Dentro le scatole di cartone dei pacchi.</li>
+                    <li><strong>Nemico giurato:</strong> La mano di chiunque.</li>
+                    <li><strong>Passatempo:</strong> Guardare la Tv.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>🏆 Le mie abilità speciali</h2>
+                <p style="text-align: left; margin: 0;"><strong>Dormire sul divano:</strong></p>
+                <div class="skill-bar"><div class="skill-level" style="width: 100%;">100%</div></div>
+                <p style="text-align: left; margin: 0;"><strong>Svegliare gli umani alle 4 del mattino:</strong></p>
+                <div class="skill-bar"><div class="skill-level" style="width: 95%;">95%</div></div>
+                <p style="text-align: left; margin: 0;"><strong>Ignorare i richiami quando mi chiamano:</strong></p>
+                <div class="skill-bar"><div class="skill-level supreme" style="width: 100%;">Livello Supremo</div></div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="card">
+                <img src="Renatino_riposa.jpeg" alt="Renatino che riposa">
+                <h2>Il riposo del guerriero</h2>
+                <p>Dormire 18 ore al giorno è un lavoro faticoso, ma qualcuno deve pur farlo per mantenere questo pelo lucido.</p>
+            </div>
+
+            <div class="card">
+                <img src="WhatsApp Image 2026-02-12 at 15.18.00 (2).jpeg" alt="Renatino e la pappa">
+                <h2>L'ora della pappa</h2>
+                <p>I miei umani sanno benissimo che se la ciotola è mezza vuota, ci troviamo di fronte a un'emergenza internazionale.</p>
+            </div>
+
+            <div class="card">
+                <img src="Veterinario.jpeg" alt="Renatino dal veterinario">
+                <h2>Il Tradimento Supremo</h2>
+                <p>Mi avevate detto: "Andiamo a fare un giro bello, ti diamo il biscottino". Invece mi ritrovo su un tavolo freddo con uno sconosciuto che mi guarda nelle orecchie e mi punge. Stanotte dormite con un occhio aperto.</p>
+            </div>
+
+            <div class="card">
+                <img src="bacio.jpeg" alt="Renatino che riceve un bacio">
+                <h2>Il Sacrificio Reale</h2>
+                <p>Va bene, umano, puoi baciarmi la guancia. Ma fai in fretta, ho una reputazione da mantenere e i miei sudditi (gli uccellini fuori dalla finestra) potrebbero vedermi.</p>
+            </div>
+
+            <div class="card">
+                <img src="cartone.jpeg" alt="Ritratto di famiglia a cartone">
+                <h2>La mia Famiglia Reale</h2>
+                <p>Io, la Mamy e il Papy in versione cartone animato! Ovviamente io sono il protagonista assoluto, bello e fiero. Loro sono solo le mie fedeli comparse disegnate.</p>
+            </div>
+
+            <div class="card">
+                <img src="Spalla_Deborah.jpeg" alt="Renatino in auto sulla spalla">
+                <h2>Il Copilota Ufficiale</h2>
+                <p>Perché viaggiare nel trasportino quando posso stare sulla spalla della Mamy e dirle come guidare? "Gira a destra, Mamy! Più veloce, dobbiamo arrivare al negozio di croccantini!"</p>
+            </div>
+
+            <div class="card">
+                <img src="vomita.jpeg" alt="Renatino che vomita">
+                <h2>Arte Contemporanea sui Tappeti</h2>
+                <p>Ho mangiato troppo in fretta? Forse. Il tappeto pulito era troppo noioso? Sicuramente. Ho deciso di lasciarvi un regalino per ridecorare casa. Prego, non c'è di che.</p>
+            </div>
+
+            <div class="card">
+                <img src="Renatino_cacca.jpeg" alt="Renatino nella lettiera">
+                <h2>Lavori in Corso (Non Disturbare)</h2>
+                <p>L'arte di scavare fino al centro della Terra alle 3 di notte per seppellire i miei capolavori. E sì, vi fisso dritto negli occhi mentre lo faccio per stabilire la dominanza.</p>
+            </div>
+
+            <div class="card">
+                <img src="box.jpeg" alt="Renatino al sacco da boxe">
+                <h2>Rocky Balboa, spostati</h2>
+                <p>Occhio della tigre, zampa del felino. Mi sto allenando duramente al sacco da boxe. L'aspirapolvere e le scope hanno i giorni contati, sto arrivando per loro.</p>
+            </div>
+
+            <div class="card">
+                <img src="linguaccia.jpeg" alt="Renatino linguaccia">
+                <h2>Paparazzi, Bleah!</h2>
+                <p>Un bel "blep" reale! Ecco cosa vi meritate per avermi puntato il telefono in faccia in ogni singolo istante della mia vita. Linguaccia a tutti!</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 50px 0; width: 100%;">
+            <a href="index.html" class="btn">⬅ Torna alla Home</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
